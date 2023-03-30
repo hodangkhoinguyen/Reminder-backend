@@ -13,11 +13,11 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-const mailer = (recipient, header, context) => {
+const mailer = (recipient, title, context) => {
     const mailOptions = {
         from: 'playreminder2023@gmail.com',
         to: recipient,
-        subject: header,
+        subject: title,
         html: context
     };
 
