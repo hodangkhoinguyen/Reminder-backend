@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const User = mongoose.model('User',
+const Reminder = mongoose.model('Reminder',
     new mongoose.Schema({
         user: {
             type: mongoose.Schema.Types.ObjectId,
@@ -8,8 +8,11 @@ const User = mongoose.model('User',
         },
         recurring: Boolean,
         when: String,
-        active: Boolean
+        title: String,
+        context: String,
+        active: Boolean,
+        taskName: String
     })
 );
 
-export default User;
+export default Reminder;
